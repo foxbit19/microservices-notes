@@ -48,23 +48,34 @@ DDD calls a context the **bounded context** (BC).
 
 Every domain model lives in precisely one bounded context and a bounded context contains precisely one domain model.
 
-This definition may be confused: if BCs are isomorphic to domain models, why introduce a new term?
+This definition may be confusing: if BCs are isomorphic to domain models, why introduce a new term?
 Different systems (BCs) also interact with each other, sending files, passing messages, invoking APIs, etc. If we know there are two BCs interacting with each other, then we know we must take care to translate between the concepts in one domain and those of the other.
 
 So, how BCs could interact with each other? DDD identifies a whole set of relationships between BCs, so that we can rationalize as to what we should do when we need to link our different BCs together:
 
-- *published language*;
-- *open host service*
-- *shared kernel*;
-- *customer/supplier*;
-- *conformist*;
-- *anti-corruption layer*;
+- *published language*: the interacting BCs agree on a common a language (e.g. JSON, XML);
+- *open host service*: a BC specifies a protocol (e.g. RESTful);
+- *shared kernel*: two BCs use a common kernel of code (e.g. a library);
+- *customer/supplier*: one BC uses the services of another and is a stakeholder (customer) of that other BC;
+- *conformist*: one BC uses the services of another but is not a stakeholder to that other BC;
+- *anti-corruption layer*: one BC uses the services of another and is not a stakeholder, but aims to minimize impact from changes in the BC it depends on by introducing a set of adapters.
+
+We have maximum level of interaction between BCs with *published language* and minimum level of interaction with *anti-corruption layer* where an adapter or a set of adapters needs to be build to ensure contexts' communication.
 
 ![Context relationships](./img/contexts-rels.png "Context relationships")
 
+### Context maps
+
+Context maps are a visualisation of your highlevel strategy for solving the business problem.
+They show the organisational and technical boundaries you believe will lead to the most effective solution for sustainably delivering value. 
+
+![Context map](./img/context-map.jpg "An example of context map")
+
+There is no official notation for context maps, nor rules that govern them. You can visualise any information that highlights the relationship between domain, team, and technical boundaries. 
 
 ## References
 
 - [The Anatomy of domain-driven design](https://leanpub.com/theanatomyofdomain-drivendesign) - Scott Millett
 - [An Introduction to Domain Driven Design](http://www.methodsandtools.com/archive/archive.php?id=97) - Dan Haywood
 - [Getting Started with Domain-Driven Design](http://www.informit.com/articles/article.aspx?p=1944876&seqNum=3) - Vaughn Vernon
+- [The Strategic Practices of Domain-Driven Design](http://www.ntcoding.co.uk/workshops/strategic-ddd-practices) - Nick Tune
