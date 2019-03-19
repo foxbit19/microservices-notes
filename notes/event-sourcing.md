@@ -2,6 +2,8 @@
 
 Event sourcing is a *pattern*, used in software projects, to atomically update state of an entity and publish events.
 
+![Event sourcing](img/es.png "Event sourcing")
+
 ### The state
 
 The traditional way to persist an entity is to save its current state. Event sourcing uses a radically different, event-centric approach to persistence. A business object is persisted by storing a sequence of state changing events. Whenever an object’s state changes, a new event is appended to the sequence of events. A entity’s current state is reconstructed by replaying its events.
