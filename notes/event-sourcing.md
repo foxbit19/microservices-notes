@@ -34,3 +34,4 @@ The key to Event Sourcing is that we guarantee that all changes to the domain ob
 - [Event sourcing](http://eventuate.io/whyeventsourcing.html) - eventuate.io
 - [Event sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) - Martin Fowler
 - [Introduction to Event Sourcing and Command-Query Responsibility Segregation](http://squirrel.pl/blog/2015/08/31/introduction-to-event-sourcing-and-command-query-responsibility-segregation/) - Konrad Garus
+- [Introducing Event Sourcing](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/jj591559(v=pandp.10)) - Microsoft article
