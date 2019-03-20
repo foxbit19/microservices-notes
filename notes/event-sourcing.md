@@ -1,6 +1,6 @@
 # Event sourcing
 
-Event sourcing is a *pattern*, used in software projects, to atomically update state of an entity and publish events.
+Event sourcing is an application architecture *pattern*, used in software projects, to atomically update state of an entity and publish events.
 
 ![Event sourcing](img/es.png "Event sourcing")
 
