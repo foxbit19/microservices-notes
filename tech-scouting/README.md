@@ -8,6 +8,7 @@
 * [Protobuf](#Protobuf)
 	* [Resources](#Resources-1)
 * [Axon](#Axon)
+	* [References](#References)
 * [GraphQL](#GraphQL)
 	* [Resources](#Resources-1)
 
@@ -58,7 +59,7 @@ Protobuf is a language-neutral, platform-neutral, extensible way of serializing 
 
 Axon is a framework and server for event-driven microservices.
 
-### References
+### <a name='References'></a>References
 
 [Reference guide](https://docs.axoniq.io/reference-guide/)
 
